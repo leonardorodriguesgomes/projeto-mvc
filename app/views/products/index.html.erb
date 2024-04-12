@@ -1,0 +1,15 @@
+<h1>
+Index/controller products
+</h1>
+<%= link_to "Criar produto", new_product_path%>
+
+<% @products.each do |product|%>
+
+<p><%=product.name%></p>
+<p><%=product.price%></p>
+<p><%=product.qtd%></p>
+<%= link_to "ver produto", product%>
+<%= link_to "edit", edit_product_url(product)%>
+<%= button_to "apagar", product, method: :delete, form:{ data:{turbo_confirm: "Você quer apagar este produto"}}%>
+<%end%>
+

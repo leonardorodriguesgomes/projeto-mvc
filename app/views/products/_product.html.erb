@@ -1,0 +1,14 @@
+<%= form_with(model: @product) do |form|%>
+    <%=form.label :name%>
+    <%=form.text_field :name %>
+
+    <%=form.label :qtd%>
+    <%=form.number_field :qtd %>
+
+    <%=form.label :price%>
+    <%=form.number_field :price %>
+
+    <%=form.submit :"salvar"%>
+
+<% end %>
+
